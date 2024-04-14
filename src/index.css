@@ -12,6 +12,7 @@
     --Dark-Electric-Blue: #5e6e85;
     --Border-Color: #d8e2e7;
     --White:#ffffff;
+    --Radio-Check-Background: rgb(52, 95, 246, .15);
 
     /* Font Declaration */
 
@@ -78,4 +79,122 @@ div.bmi-result{
 
 section#hero :nth-child(2):nth-child(1){
     width: 80%;
+}
+
+/* Radio Button Styling */
+
+.radio label{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 1.125rem;
+    font: var(--Body-M-Bold);
+    text-transform: capitalize;
+}
+
+input[type="radio"]{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: .066rem solid var(--Border-Color);
+    background-color: none;
+    display: grid;
+    place-content: center;
+    transition: background-color .1s ease-in;
+}
+
+input[type="radio"]::before{
+    content:"";
+    height: 1rem;
+    width: 1rem;
+    display: block;
+    background-color: var(--Blue);
+    border-radius: 50%;
+    margin: auto;
+    transform: scale(0);
+    transition: transform 100ms ease-in;
+}
+
+input[type="radio"]:checked::before{
+    transform: scale(1);
+}
+
+input[type='radio']:checked{
+    background-color: var(--Radio-Check-Background);
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    
+}
+
+.radio-group{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1.5rem;
+    width: 100%;
+}
+
+input[type="number"]
+{
+    border: .066rem solid var(--Border-Color);
+    padding: 1.25rem 1.5rem;
+    font: var(--Heading-M);
+    width: 100%;
+    border-radius: .75rem;
+    -moz-appearance: textfield;
+}
+
+input[type="number"]:focus-visible
+{
+    border: .066rem solid var(--Border-Color);
+    padding: 1.25rem 1.5rem;
+    outline: none;
+}
+
+input[type="text"]:active
+{
+    border: .066rem solid var(--Border-Color);
+    padding: 1.25rem 1.5rem;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+div.text-field label{
+    font: var(--Body-S-Regular);
+    color: var(--Dark-Electric-Blue);
+    text-transform: capitalize;
+}
+
+div.text-field{
+    gap:.5rem;
+}
+
+.gap-24{
+    gap: 1.5rem;
+}
+
+.gap-16{
+    gap: 1rem;
+}
+
+.input-container{
+    position: relative;
+}
+
+span.unit{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font: var(--Heading-M);
+    color: var(--Blue)
 }

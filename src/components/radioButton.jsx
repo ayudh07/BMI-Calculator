@@ -1,9 +1,11 @@
-export default function RadioButton({name='dummy', value='dummy'}){
+export default function RadioButton({name='dummy', value='dummy', checked}){
 
     return (
         <div className="radio">
-            <input type="radio" name={name} value={value} id={value}/>
-            <label htmlFor="">{value}</label>
+            <label htmlFor={value}>
+                <input type="radio" name={name} value={value} id={value} onChange={()=>{alert(value +" Selected")}}/>
+                {value}
+            </label>
         </div>
     )
 }
