@@ -20,11 +20,11 @@ export default function Calculator(){
         if(height & weight){
             let hm = height/100;
             let bmi = weight/(hm*hm);
-            bmi = Math.round((bmi + Number.EPSILON) * 100) / 100
+            bmi = Math.round((bmi + Number.EPSILON) * 10) / 10
             setBmi(bmi);
             console.log(bmi);
         }
-    }) ;
+    },[height, weight]) ;
     
     return(
         <div className="d-flex flex-column gap32">
