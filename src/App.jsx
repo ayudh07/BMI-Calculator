@@ -1,12 +1,32 @@
-import { useState } from 'react'
-
+import Section from "./components/section";
+import Card from "./components/card";
+import Logo from './assets/images/logo.svg';
+import Calculator from "./components/calculator";
 function App() {
 
   return (
     <>
-      BMI
+      <Section predefinedClasses='d-flex flex-column gap32 section-height' id='hero'>
+        <div className="logo">
+          <img src={Logo} alt="BMI Logo" />
+        </div>
+        <div className="d-flex flex-lg-row gap32 flex-column">
+          <div className="d-flex flex-column gap-5 col justify-content-center pe-5 me-5">
+            <h1 style={{font: 'var(--Heading-XL)'}}>Body Mass Index Calculator</h1>
+            <p style={{font: 'var(--Body-M-Regular)'}}>
+              Better understand your weight in relation to your height using our body mass index (BM) calculator. 
+              While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.
+            </p>
+          </div>
+          <div className="d-flex justify-content-center align-item-center col pe-5 me-5">
+            <Card variant='other' >
+              <Calculator />
+            </Card>
+          </div>
+        </div>
+      </Section>
     </>
   )
 }
 
-export default App
+export default App;
