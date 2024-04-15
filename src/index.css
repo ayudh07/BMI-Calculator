@@ -1,164 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-:root{
+:root {
+  /* Webpage Defaults */
+  font-family: "Inter", sans-serif;
 
-    /* Webpage Defaults */
-    font-family: "Inter", sans-serif;
-    
-    /* Color Declaratiom */
+  /* Color Declaratiom */
 
-    --Blue:#345ff6;
-    --Gunmetal: #253347;
-    --Dark-Electric-Blue: #5e6e85;
-    --Border-Color: #d8e2e7;
-    --White:#ffffff;
-    --Radio-Check-Background: rgb(52, 95, 246, .15);
+  --Blue: #345ff6;
+  --Gunmetal: #253347;
+  --Dark-Electric-Blue: #5e6e85;
+  --Border-Color: #d8e2e7;
+  --White: #ffffff;
+  --Radio-Check-Background: rgb(52, 95, 246, 0.15);
 
-    /* Font Declaration */
+  /* Font Declaration */
 
-    --Heading-XL: 600 4rem/110% "Inter", sans-serif;
-    --Heading-L: 600 3rem/110% "Inter", sans-serif;
-    --Heading-M: 600 1.5rem/110% "Inter", sans-serif;
-    --Heading-S: 600 1.25rem/110% "Inter", sans-serif;
-    
-    --Body-M-Regular: 400 1rem/150% "Inter", sans-serif;
-    --Body-M-Bold: 600 1rem/150% "Inter", sans-serif;
-    --Body-S-Regular: 400 0.875rem/150% "Inter", sans-serif;
-    
-    --Box-Shadow: 1rem 2rem 3.5rem rgb(143,174,207,.25);
+  --Heading-XL: 600 4rem/110% "Inter", sans-serif;
+  --Heading-L: 600 3rem/110% "Inter", sans-serif;
+  --Heading-M: 600 1.5rem/110% "Inter", sans-serif;
+  --Heading-S: 600 1.25rem/110% "Inter", sans-serif;
+
+  --Body-M-Regular: 400 1rem/150% "Inter", sans-serif;
+  --Body-M-Bold: 600 1rem/150% "Inter", sans-serif;
+  --Body-S-Regular: 400 0.875rem/150% "Inter", sans-serif;
+
+  --Box-Shadow: 1rem 2rem 3.5rem rgb(143, 174, 207, 0.25);
 }
 
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: var(--White);
-    font-size: 16px;
+body {
+  background-color: var(--White);
+  font-size: 16px;
+  overflow: overlay;
 }
 
-p{
-    margin-bottom: 0;
+p {
+  margin-bottom: 0;
+}
+/* Scroll Bar Design */
+
+::-webkit-scrollbar {
+  display: none;
 }
 
-div.card{
-    background-color: var(--White);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: var(--Box-Shadow);
-    width: fit-content;
+div.card {
+  background-color: var(--White);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--Box-Shadow);
+  width: fit-content;
 }
 
-.container{
-    margin: 0 8.75rem;
+.container {
+  margin: 0 8.75rem;
 }
 
-.gap32{
-    gap:2rem;
+.gap32 {
+  gap: 2rem;
 }
 
-section.section-height{
-    padding: 0 8.75rem;
-    margin-bottom: 4rem;
+section.section-height {
+  padding: 0 8.75rem;
+  margin-bottom: 4rem;
 }
 
-div.logo{
-    margin-top: 4.675rem;
-    margin-bottom: 1.25rem;
+div.calculator-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
 }
 
-
-div.bmi-result{
-    background: var(--Blue);
-    padding: 2rem;
-    border-radius: 8rem 100rem 100rem 8rem;
-    color: white
+div.logo {
+  margin-top: 4.675rem;
+  margin-bottom: 1.25rem;
 }
 
-section#hero :nth-child(2):nth-child(1){
-    width: 80%;
+div.bmi-result {
+  background: var(--Blue);
+  padding: 2rem;
+  border-radius: 8rem 100rem 100rem 8rem;
+  color: white;
+}
+
+section#hero :nth-child(2):nth-child(1) {
+  width: 80%;
 }
 
 /* Radio Button Styling */
 
-.radio label{
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    gap: 1.125rem;
-    font: var(--Body-M-Bold);
-    text-transform: capitalize;
+.radio label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.125rem;
+  font: var(--Body-M-Bold);
+  text-transform: capitalize;
 }
 
-input[type="radio"]{
-    appearance: none;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    border: .066rem solid var(--Border-Color);
-    background-color: none;
-    display: grid;
-    place-content: center;
-    transition: background-color .1s ease-in;
+input[type="radio"] {
+  appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 0.066rem solid var(--Border-Color);
+  background-color: none;
+  display: grid;
+  place-content: center;
+  transition: background-color 0.1s ease-in;
 }
 
-input[type="radio"]::before{
-    content:"";
-    height: 1rem;
-    width: 1rem;
-    display: block;
-    background-color: var(--Blue);
-    border-radius: 50%;
-    margin: auto;
-    transform: scale(0);
-    transition: transform 100ms ease-in;
+input[type="radio"]::before {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  display: block;
+  background-color: var(--Blue);
+  border-radius: 50%;
+  margin: auto;
+  transform: scale(0);
+  transition: transform 100ms ease-in;
 }
 
-input[type="radio"]:checked::before{
-    transform: scale(1);
+input[type="radio"]:checked::before {
+  transform: scale(1);
 }
 
-input[type='radio']:checked{
-    background-color: var(--Radio-Check-Background);
+input[type="radio"]:checked {
+  background-color: var(--Radio-Check-Background);
 }
 
-.input-group{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.radio-group{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 1.5rem;
-    width: 100%;
+.radio-group {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1.5rem;
+  width: 100%;
 }
 
-input[type="number"]
-{
-    border: .066rem solid var(--Border-Color);
-    padding: 1.25rem 1.5rem;
-    font: var(--Heading-M);
-    width: 100%;
-    border-radius: .75rem;
-    -moz-appearance: textfield;
+input[type="number"] {
+  border: 0.066rem solid var(--Border-Color);
+  padding: 1.25rem 1.5rem;
+  font: var(--Heading-M);
+  width: 100%;
+  border-radius: 0.75rem;
+  -moz-appearance: textfield;
 }
 
-input[type="number"]:focus-visible
-{
-    border: .066rem solid var(--Border-Color);
-    padding: 1.25rem 1.5rem;
-    outline: none;
+input[type="number"]:focus-visible {
+  border: 0.066rem solid var(--Border-Color);
+  padding: 1.25rem 1.5rem;
+  outline: none;
 }
 
-input[type="text"]:active
-{
-    border: .066rem solid var(--Border-Color);
-    padding: 1.25rem 1.5rem;
-    outline: none;
+input[type="text"]:active {
+  border: 0.066rem solid var(--Border-Color);
+  padding: 1.25rem 1.5rem;
+  outline: none;
 }
 
 input::-webkit-outer-spin-button,
@@ -167,34 +173,33 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-div.text-field label{
-    font: var(--Body-S-Regular);
-    color: var(--Dark-Electric-Blue);
-    text-transform: capitalize;
+div.text-field label {
+  font: var(--Body-S-Regular);
+  color: var(--Dark-Electric-Blue);
+  text-transform: capitalize;
 }
 
-div.text-field{
-    gap:.5rem;
+div.text-field {
+  gap: 0.5rem;
 }
 
-.gap-24{
-    gap: 1.5rem;
+.gap-24 {
+  gap: 1.5rem;
 }
 
-.gap-16{
-    gap: 1rem;
+.gap-16 {
+  gap: 1rem;
 }
 
-.input-container{
-    position: relative;
+.input-container {
+  position: relative;
 }
 
-span.unit{
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font: var(--Heading-M);
-    color: var(--Blue)
+span.unit {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font: var(--Heading-M);
+  color: var(--Blue);
 }
-
