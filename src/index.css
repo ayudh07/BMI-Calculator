@@ -59,9 +59,8 @@ div.card{
 }
 
 section.section-height{
-    height: 80vh;
-    width: 100vw;
     padding: 0 8.75rem;
+    margin-bottom: 4rem;
 }
 
 div.logo{
@@ -198,3 +197,4 @@ span.unit{
     font: var(--Heading-M);
     color: var(--Blue)
 }
+

@@ -11,7 +11,7 @@ function App() {
           <img src={Logo} alt="BMI Logo" />
         </div>
         <div className="d-flex flex-lg-row gap32 flex-column">
-          <div className="d-flex flex-column gap-5 col justify-content-center pe-5 me-5">
+          <div className="d-flex flex-column gap-5 col pe-5 me-5" style={{marginTop: "6rem"}}>
             <h1 style={{font: 'var(--Heading-XL)'}}>Body Mass Index Calculator</h1>
             <p style={{font: 'var(--Body-M-Regular)'}}>
               Better understand your weight in relation to your height using our body mass index (BM) calculator. 

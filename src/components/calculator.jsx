@@ -16,6 +16,10 @@ export default function Calculator(){
         setHeight(value);
     }
 
+    function handleSystem(value){
+        setCurrentSystem(value);
+    }
+
     useEffect(() => {
         if(height & weight){
             let hm = height/100;
@@ -29,11 +33,25 @@ export default function Calculator(){
     return(
         <div className="d-flex flex-column gap32">
             <h2 style={{font: 'var(--Heading-M)'}}>Enter your details below</h2>
-                <RadioGroup groupIdentifier="system" options={["metric", "imperial"]} defaultChecked={currentSystem}/>
-            <div className="d-flex flex-row gap-24">
-                <InputField type='number' unit='cm' label="Height" onValueChange={handleHeightChange}/>
-                <InputField type='number' unit='kg' label="Weight" onValueChange={handleWeightChange}/>
-            </div>
+                <RadioGroup groupIdentifier="system" options={["metric", "imperial"]} defaultChecked={currentSystem} shareValue={handleSystem}/>
+            {
+                currentSystem == "metric"?
+                <div className="d-flex flex-row gap-24">
+                    <InputField type='number' unit='kg' label="Weight" onValueChange={handleWeightChange}/>
+                    <InputField type='number' unit='cm' label="Height" onValueChange={handleHeightChange}/>
+                </div>
+                :
+                <>
+                    <div className="d-flex flex-row gap-24 align-items-end">
+                        <InputField type='number' unit='ft' label="Height" onValueChange={handleWeightChange}/>
+                        <InputField type='number' unit='in'  onValueChange={handleHeightChange}/>
+                    </div>
+                    <div className="d-flex flex-row gap-24 align-items-end">
+                        <InputField type='number' unit='st' label="Weight" onValueChange={handleWeightChange}/>
+                        <InputField type='number' unit='lbs'  onValueChange={handleHeightChange}/>
+                    </div>  
+                </>
+            }
             <div className="d-flex flex-row justify-content-between gap-3 align-items-center bmi-result">
                 {
                     bmi ? 
