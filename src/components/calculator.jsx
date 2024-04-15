@@ -20,44 +20,44 @@ export default function Calculator() {
   function handleKgChange(value) {
     console.log(value);
     setKg(value);
-    bmiCalculation();
   }
 
   function handleStChange(value) {
     console.log(value);
     setSt(value);
-    bmiCalculation();
   }
 
   function handleLbChange(value) {
     console.log(value);
     setLb(value);
-    bmiCalculation();
   }
 
   //   handle height changes
   function handleCmChange(value) {
     console.log(value);
     setCm(value);
-    bmiCalculation();
   }
 
   function handleFtChange(value) {
     console.log(value);
     setFt(value);
-    bmiCalculation();
   }
 
   function handleInchChange(value) {
     console.log(value);
     setInch(value);
-    bmiCalculation();
   }
 
   //   change calculation system
   function handleSystem(value) {
     setCurrentSystem(value);
     setBmi(0);
+    setKg(0);
+    setSt(0);
+    setLb(0);
+    setCm(0);
+    setFt(0);
+    setInch(0);
   }
 
   // Calculate bmi
@@ -73,10 +73,11 @@ export default function Calculator() {
       setBmi(bmiMetric);
       console.log("Metric:" + bmiMetric);
     } else if (currentSystem == "imperial") {
-      let inches = ft * 12 + inch;
-      let lbs = st * 14 + lb;
-      let bmiImperial = 703 * (lbs / (inches * inches)) * 100;
-      // bmiImperial = Math.round((bmiImperial + Number.EPSILON) * 10) / 10;
+      let inches = ft * 12 + parseInt(inch);
+      let lbs = st * 14 + parseInt(lb);
+      console.log("lbs:" + lbs);
+      let bmiImperial = 703 * (lbs / (inches * inches));
+      bmiImperial = Math.round((bmiImperial + Number.EPSILON) * 10) / 10;
       setBmi(bmiImperial);
       console.log("Metric:" + bmiImperial);
     }
