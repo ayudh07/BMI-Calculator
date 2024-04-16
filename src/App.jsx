@@ -49,7 +49,7 @@ function App() {
           <div className="col">
             <img src={Image} alt="A smiling Man" style={{width: "100%"}}/>
           </div>
-          <div className="d-flex flex-column justify-content-end col gap-32 ps-lg-5 pb-lg-5 ms-lg-5 mb-lg-5">
+          <div className="d-flex flex-column justify-content-end col gap-32 ps-lg-5 ms-lg-5 mb-lg-5">
             <h2 style={{ font: "var(--Heading-L)" }} className="text-lg-start text-center">
               What your BMI result mean
             </h2>
