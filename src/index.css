@@ -261,3 +261,19 @@ span{
 .mobile{
   display: none!important;
 }
+
+div.gradient-background{
+  position: absolute;
+  width: 70vw;
+  height: 80vh;
+  background: rgb(214,230,254);
+  background: rgb(214,230,254);
+  background: -moz-linear-gradient(135deg, rgba(214,230,254,0) 0%, rgba(214,252,254,1) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(214,230,254,0) 0%, rgba(214,252,254,1) 100%);
+  background: linear-gradient(135deg, rgba(214,230,254,0) 0%, rgba(214,252,254,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d6e6fe",endColorstr="#d6fcfe",GradientType=1);
+  top: 0;
+  left: 1vw;
+  z-index: -1;
+  border-radius: 0 0 2rem 2rem;
+}

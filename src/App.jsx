@@ -14,6 +14,7 @@ import race from './assets/images/icon-race.svg'
 function App() {
   return (
     <>
+      <div className="gradient-background"></div>
       <Section
         predefinedClasses="d-flex flex-column gap-32 section-height"
       >

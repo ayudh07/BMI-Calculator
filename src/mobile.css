@@ -25,5 +25,14 @@
     }
     .mobile{
         display: flex!important;
+    }
+    div.gradient-background{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0 0 2rem 2rem;
       }
 }
