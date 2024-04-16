@@ -50,7 +50,7 @@ p {
 div.card {
   background-color: var(--White);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: var(--Box-Shadow);
   width: fit-content;
 }
