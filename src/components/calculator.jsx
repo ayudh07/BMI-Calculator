@@ -84,7 +84,7 @@ export default function Calculator() {
   }, [cm, kg, ft, inch, lb, st, currentSystem]);
 
   return (
-    <div className="d-flex flex-column gap32">
+    <div className="d-flex flex-column gap-32">
       <h2 style={{ font: "var(--Heading-M)" }}>Enter your details below</h2>
       <RadioGroup
         groupIdentifier="system"
