@@ -16,20 +16,18 @@ function App() {
     <>
       <Section
         predefinedClasses="d-flex flex-column gap-32 section-height"
-        id="hero"
       >
-        <div className="logo">
+        <div className="logo d-flex justify-content-center justify-content-lg-start">
           <img src={Logo} alt="BMI Logo" />
         </div>
         <div className="d-flex flex-lg-row gap-32 flex-column">
           <div
-            className="d-flex flex-column gap-5 col pe-5 me-5"
-            style={{ marginTop: "6rem" }}
+            className="d-flex flex-column justify-content-center gap-5 col pe-lg-5 me-lg-5"
           >
-            <h1 style={{ font: "var(--Heading-XL)" }}>
+            <h1 style={{ font: "var(--Heading-XL)" }} className="text-lg-start text-center">
               Body Mass Index Calculator
             </h1>
-            <p className="description">
+            <p className="description text-lg-start text-center">
               Better understand your weight in relation to your height using our
               body mass index (BM) calculator. While BMI is not the sole
               determinant of a healthy weight, it offers a valuable starting
@@ -50,11 +48,11 @@ function App() {
           <div className="col">
             <img src={Image} alt="A smiling Man" style={{width: "100%"}}/>
           </div>
-          <div className="d-flex flex-column justify-content-end col gap-32 ps-5 pb-5 ms-5 mb-5">
-            <h2 style={{ font: "var(--Heading-L)" }}>
+          <div className="d-flex flex-column justify-content-end col gap-32 ps-lg-5 pb-lg-5 ms-lg-5 mb-lg-5">
+            <h2 style={{ font: "var(--Heading-L)" }} className="text-lg-start text-center">
               What your BMI result mean
             </h2>
-            <p className="description">
+            <p className="description text-lg-start text-center">
               A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
               Maintaining a healthy weight may lower your chances of
               experiencing health issues later on, such as obesity and type 2
@@ -69,7 +67,7 @@ function App() {
       <Section
         predefinedClasses="d-flex flex-row gap-24 section-height"
       >
-        <div className="habit-box d-flex flex-row gap-24">
+        <div className="habit-box d-flex flex-column flex-lg-row gap-24">
           {HabitData.map((data, index) => {
             return (
               <HabitCard
@@ -84,9 +82,9 @@ function App() {
         </div>
       </Section>
       <Section
-        predefinedClasses="d-flex flex-row gap-24 section-height"
+        predefinedClasses="d-flex flex-lg-row flex-column gap-24 section-height"
       >
-          <div className="d-flex flex-column col gap-32 limitations-header">
+          <div className="d-flex flex-column col gap-32 limitations-header mb-lg-1 mb-5">
             <h2 style={{ font: "var(--Heading-L)" }}>
               Limitations of BMI
             </h2>
@@ -97,7 +95,7 @@ function App() {
             </p>
           </div>
           <div className="col d-flex flex-column align-items-end">
-            <div className="limitation-box ">
+            <div className="limitation-box desktop">
               <div className="d-flex gap-5 flex-row justify-content-end" style={{marginRight: '10vw'}}>
                 <Card   
                   title='gender'
@@ -135,6 +133,36 @@ function App() {
                 />
               </div>
             </div>
+
+            {/* Mobile */}
+            <div className="limitation-box mobile">
+              <Card   
+                  title='gender'
+                  icon={gender}
+                  description="The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI."         
+                />
+                <Card   
+                  title='age'
+                  icon={age}
+                  description="In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content."         
+
+                />
+                <Card   
+                  title='muscle'
+                  icon={muscle}
+                  description="BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat."         
+                />
+                <Card   
+                  title='pregnancy'
+                  icon={pregnancy}
+                  description="Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child."         
+                />
+                <Card   
+                  title='race'
+                  icon={race}
+                  description="Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse."         
+                />
+                </div>
           </div>
 
       </Section>

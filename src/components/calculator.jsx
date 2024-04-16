@@ -85,7 +85,7 @@ export default function Calculator() {
 
   return (
     <div className="d-flex flex-column gap-32">
-      <h2 style={{ font: "var(--Heading-M)" }}>Enter your details below</h2>
+      <h2 style={{ font: "var(--Heading-M)" }} className="text-lg-start text-center">Enter your details below</h2>
       <RadioGroup
         groupIdentifier="system"
         options={["metric", "imperial"]}
@@ -93,17 +93,17 @@ export default function Calculator() {
         shareValue={handleSystem}
       />
       {currentSystem == "metric" ? (
-        <div className="d-flex flex-row gap-24">
+        <div className="d-flex flex-lg-row flex-column gap-24">
           <InputField
             type="number"
             unit="cm"
-            label="cm"
+            label="Height"
             onValueChange={handleCmChange}
           />
           <InputField
             type="number"
             unit="kg"
-            label="kg"
+            label="Weight"
             onValueChange={handleKgChange}
           />
         </div>

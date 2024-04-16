@@ -1,0 +1,29 @@
+@media (min-width: 350px) and (max-width:799px){
+    section.section-height {
+        padding: 0 1.5rem;
+        margin: 3rem 0;
+    }
+
+    div.logo{
+        margin-bottom: 1.5rem!important;
+    }
+    
+    div.limitations-header {
+        position: relative;
+        width: 100%;
+    }
+
+    div.limitation-box{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .desktop{
+        display: none!important;
+    }
+    .mobile{
+        display: flex!important;
+      }
+}

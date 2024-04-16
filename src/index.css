@@ -257,3 +257,7 @@ span.card-titles{
 span{
   margin: 0;
 }
+
+.mobile{
+  display: none!important;
+}
