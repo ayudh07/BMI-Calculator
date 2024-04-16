@@ -59,19 +59,13 @@ div.card {
   margin: 0 8.75rem;
 }
 
-.gap32 {
+.gap-32 {
   gap: 2rem;
 }
 
 section.section-height {
   padding: 0 8.75rem;
   margin-bottom: 4rem;
-}
-
-div.calculator-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
 }
 
 div.logo {
@@ -202,4 +196,27 @@ span.unit {
   transform: translateY(-50%);
   font: var(--Heading-M);
   color: var(--Blue);
+}
+
+p.description {
+  font: var(--Body-M-Regular);
+  color: var(--Dark-Electric-Blue);
+  margin: 0;
+  padding: 0;
+}
+
+div.col img {
+  width: 100%;
+}
+
+div.habit-card {
+  gap: 2.75rem;
+}
+
+span.title {
+  font: var(--Heading-M);
+}
+
+div.habit-card img {
+  height: 4rem;
 }
