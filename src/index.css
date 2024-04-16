@@ -221,6 +221,8 @@ section.bmi-description {
 
 div.habit-box{
   margin: 4.75rem 0;
+  padding: 2rem;
+  border-radius: 1.5rem;
 }
 
 img.icon{
@@ -276,4 +278,14 @@ div.gradient-background{
   left: 1vw;
   z-index: -1;
   border-radius: 0 0 2rem 2rem;
+}
+
+.gradient{
+  background: rgb(214,230,254);
+  background: rgb(214,230,254);
+  background: -moz-linear-gradient(135deg, rgba(214,230,254,0) 0%, rgba(214,252,254,1) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(214,230,254,0) 0%, rgba(214,252,254,1) 100%);
+  background: linear-gradient(135deg, rgba(214,230,254,0) 0%, rgba(214,252,254,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d6e6fe",endColorstr="#d6fcfe",GradientType=1);
+  
 }

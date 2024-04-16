@@ -68,7 +68,7 @@ function App() {
       <Section
         predefinedClasses="d-flex flex-row gap-24 section-height"
       >
-        <div className="habit-box d-flex flex-column flex-lg-row gap-24">
+        <div className="habit-box d-flex flex-column flex-lg-row gap-24 gradient">
           {HabitData.map((data, index) => {
             return (
               <HabitCard
