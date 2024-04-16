@@ -126,7 +126,7 @@ export default function Calculator() {
             <InputField
               type="number"
               unit="st"
-              label="kg"
+              label="Weight"
               onValueChange={handleStChange}
             />
             <InputField
@@ -137,10 +137,10 @@ export default function Calculator() {
           </div>
         </div>
       )}
-      <div className="d-flex flex-row justify-content-between gap-3 align-items-center bmi-result">
+      <div className="d-flex flex-lg-row flex-column justify-content-between gap-3 align-items-center bmi-result">
         {bmi ? (
           <>
-            <div className="d-flex flex-column col">
+            <div className="d-flex flex-column col w-100">
               <p style={{ marginBottom: ".5rem" }}>Your BMI is</p>
               <b style={{ font: "var(--Heading-XL)" }}>{bmi}</b>
             </div>

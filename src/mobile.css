@@ -34,5 +34,9 @@
         left: 0;
         z-index: -1;
         border-radius: 0 0 2rem 2rem;
+    }
+    div.bmi-result {
+        border-radius: 1.5rem;
+        color: white;
       }
 }

@@ -7,6 +7,10 @@
     html, body{
         font-size: 14px;
     }
+    section.section-height {
+        padding: 0 1.5rem;
+        margin: 4rem 0;
+    }
 }
 @media (min-width: 1280px) and (max-width: 1365px){
     html, body{
