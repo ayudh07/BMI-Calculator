@@ -65,11 +65,10 @@ div.card {
 
 section.section-height {
   padding: 0 8.75rem;
-  margin-bottom: 4rem;
+  margin: 6rem 0;
 }
 
 div.logo {
-  margin-top: 4.675rem;
   margin-bottom: 1.25rem;
 }
 
@@ -205,9 +204,6 @@ p.description {
   padding: 0;
 }
 
-div.col img {
-  width: 100%;
-}
 
 div.habit-card {
   gap: 2.75rem;
@@ -215,8 +211,49 @@ div.habit-card {
 
 span.title {
   font: var(--Heading-M);
+  color: var(--Gunmetal);
 }
 
-div.habit-card img {
-  height: 4rem;
+
+section.bmi-description {
+  margin: 4rem 0;
+}
+
+div.habit-box{
+  margin: 4.75rem 0;
+}
+
+img.icon{
+  height: 2rem;
+  width: 2rem;
+}
+
+div.card-headers{
+  gap: .5rem;
+  text-transform: capitalize;
+}
+
+div.card-body{
+  gap:.5rem;
+}
+
+div.limitation-box{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 60vw;
+}
+
+div.limitations-header{
+  position: absolute;
+  width: 40vw;
+}
+
+span.card-titles{
+  font: var(--Heading-S);
+  color: var(--Gunmetal);
+}
+
+span{
+  margin: 0;
 }
